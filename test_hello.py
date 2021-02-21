@@ -1,4 +1,14 @@
+from click.testing import CliRunner
 from hello import with_input
+from hellocli import callcolor
+
+
+def test_hello_cli():
+    """ this is my command line tool"""
+    runner = CliRunner()
+    result = runner.invoke(callcolor, ['--color', 'yellow'])
+    assert result.exit_code == 0
+    assert 'yellow' in result.output
 
 
 def test_with_input():

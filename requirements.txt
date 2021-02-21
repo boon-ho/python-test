@@ -1,3 +1,5 @@
+click
 pylint
 pytest
+pytest-cov
 black
