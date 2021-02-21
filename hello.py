@@ -1,11 +1,12 @@
-def toyou(x):
-    return f"hi {x}"
+from random import choices
 
 
-def add(x):
-    return x + 1
+def with_input(color):
+
+    words = ["red", "yellow", "green"]
+    new_color = choices(words)[0]
+    color_dict = {"old": color, "new": new_color}
+    return color_dict
 
 
-def subtract(x):
-    return x - 1
-    
+print(with_input("blue"))
